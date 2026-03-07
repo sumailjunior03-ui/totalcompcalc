@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Total Compensation Calculator — Compare Two Job Offers | TotalCompCalc.com</title>
+  <meta name="description" content="Compare two job offers side by side. Estimate total compensation including salary, bonus, equity, benefits, and raises over 1, 2, or 4 years." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Total Compensation Calculator — Compare Two Job Offers | TotalCompCalc.com" />
+  <meta property="og:description" content="Compare two job offers side by side. Estimate total compensation including salary, bonus, equity, benefits, and raises over 1, 2, or 4 years." />
+  <meta property="og:url" content="https://totalcompcalc.com/" />
+  <link rel="canonical" href="https://totalcompcalc.com/" />
+  <meta name="google-adsense-account" content="ca-pub-7744853829365165" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7744853829365165" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Total Compensation Calculator","url":"https://totalcompcalc.com/","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","description":"Compare two job offers side by side. Estimate total compensation including salary, bonus, equity, benefits, and raises over 1, 2, or 4 years.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body class="page-wrap">
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">Total<span>Comp</span>Calc</a>
+      <span class="site-tagline">Compare Offers · Estimate Total Compensation</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <div id="ad-slot-top" class="ad-slot ad-slot-top is-off" aria-hidden="true"></div>
+    <div id="sponsor-bar" class="sponsor-bar is-off" aria-hidden="true">
+      <span>Sponsored: </span><a href="#" rel="noopener sponsored"></a>
+    </div>
+  </div>
+
+  <main>
+    <section class="tool-hero">
+      <div class="container">
+        <h1>Total Compensation Calculator</h1>
+        <p>Estimate and compare two job offers over time — including base salary, bonus, equity, benefits, and annual raises.</p>
+        <div class="badge-row">
+          <span class="badge">Offer A vs Offer B</span>
+          <span class="badge">1 / 2 / 4 Year Horizon</span>
+          <span class="badge">RSU &amp; Options</span>
+          <span class="badge">Informational Only</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <form id="comp-form" novalidate>
+
+        <div class="offer-grid">
+
+          <!-- OFFER A -->
+          <div class="offer-card offer-a">
+            <div class="offer-header">
+              <span class="offer-tag">OFFER A</span>
+              <span class="offer-header-label">First Offer</span>
+            </div>
+            <div class="offer-body">
+
+              <p class="section-label">Salary &amp; Bonus</p>
+
+              <div class="field">
+                <label for="a-base">Base Salary (annual) <span class="req">*</span></label>
+                <div class="input-prefix">
+                  <input type="text" id="a-base" class="dollar-input" inputmode="decimal" placeholder="e.g. 120,000" autocomplete="off" />
+                </div>
+                <span class="field-error" id="a-base-error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="a-bonus-pct">Target Bonus <span class="opt">(% of base, optional)</span></label>
+                <div class="pct-suffix">
+                  <input type="text" id="a-bonus-pct" inputmode="decimal" placeholder="e.g. 15" autocomplete="off" />
+                </div>
+                <span class="field-error" id="a-bonus-pct-error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="a-bonus-prob">Bonus Payout Probability <span class="opt">(%, default 100)</span></label>
+                <div class="pct-suffix">
+                  <input type="text" id="a-bonus-prob" inputmode="decimal" placeholder="100" autocomplete="off" />
+                </div>
+                <span class="field-hint">Your estimate of likelihood of full payout.</span>
+                <span class="field-error" id="a-bonus-prob-error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="a-raise">Expected Annual Raise <span class="opt">(%, default 0)</span></label>
+                <div class="pct-suffix">
+                  <input type="text" id="a-raise" inputmode="decimal" placeholder="0" autocomplete="off" />
+                </div>
+                <span class="field-error" id="a-raise-error" role="alert"></span>
+              </div>
+
+              <p class="section-label">One-Time &amp; Annual Extras</p>
+
+              <div class="field">
+                <label for="a-signing">Signing Bonus <span class="opt">(one-time, optional)</span></label>
+                <div class="input-prefix">
+                  <input type="text" id="a-signing" class="dollar-input" inputmode="decimal" placeholder="0" autocomplete="off" />
+                </div>
+                <span class="field-error" id="a-signing-error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="a-equity-type">Equity Type <span class="opt">(informational)</span></label>
+                <select id="a-equity-type">
+                  <option value="">None / Not applicable</option>
+                  <option value="rsu">RSU (Restricted Stock Units)</option>
+                  <option value="options">Stock Options</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="a-equity">Equity Value / Year <span class="opt">(estimated, optional)</span></label>
+                <div class="input-prefix">
+                  <input type="text" id="a-equity" class="dollar-input" inputmode="decimal" placeholder="0" autocomplete="off" />
+                </div>
+                <span class="field-hint">Estimated annualized value of equity grant.</span>
+                <span class="field-error" id="a-equity-error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="a-benefits">Benefits Value / Year <span class="opt">(optional)</span></label>
+                <div class="input-prefix">
+                  <input type="text" id="a-benefits" class="dollar-input" inputmode="decimal" placeholder="0" autocomplete="off" />
+                </div>
+                <span class="field-hint">Health insurance, 401k match, etc.</span>
+                <span class="field-error" id="a-benefits-error" role="alert"></span>
+              </div>
+
+            </div>
+          </div><!-- /offer-a -->
+
+          <!-- OFFER B -->
+          <div class="offer-card offer-b">
+            <div class="offer-header">
+              <span class="offer-tag">OFFER B</span>
+              <span class="offer-header-label">Second Offer</span>
+            </div>
+            <div class="offer-body">
+
+              <p class="section-label">Salary &amp; Bonus</p>
+
+              <div class="field">
+                <label for="b-base">Base Salary (annual) <span class="req">*</span></label>
+                <div class="input-prefix">
+                  <input type="text" id="b-base" class="dollar-input" inputmode="decimal" placeholder="e.g. 110,000" autocomplete="off" />
+                </div>
+                <span class="field-error" id="b-base-error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="b-bonus-pct">Target Bonus <span class="opt">(% of base, optional)</span></label>
+                <div class="pct-suffix">
+                  <input type="text" id="b-bonus-pct" inputmode="decimal" placeholder="e.g. 20" autocomplete="off" />
+                </div>
+                <span class="field-error" id="b-bonus-pct-error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="b-bonus-prob">Bonus Payout Probability <span class="opt">(%, default 100)</span></label>
+                <div class="pct-suffix">
+                  <input type="text" id="b-bonus-prob" inputmode="decimal" placeholder="100" autocomplete="off" />
+                </div>
+                <span class="field-hint">Your estimate of likelihood of full payout.</span>
+                <span class="field-error" id="b-bonus-prob-error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="b-raise">Expected Annual Raise <span class="opt">(%, default 0)</span></label>
+                <div class="pct-suffix">
+                  <input type="text" id="b-raise" inputmode="decimal" placeholder="0" autocomplete="off" />
+                </div>
+                <span class="field-error" id="b-raise-error" role="alert"></span>
+              </div>
+
+              <p class="section-label">One-Time &amp; Annual Extras</p>
+
+              <div class="field">
+                <label for="b-signing">Signing Bonus <span class="opt">(one-time, optional)</span></label>
+                <div class="input-prefix">
+                  <input type="text" id="b-signing" class="dollar-input" inputmode="decimal" placeholder="0" autocomplete="off" />
+                </div>
+                <span class="field-error" id="b-signing-error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="b-equity-type">Equity Type <span class="opt">(informational)</span></label>
+                <select id="b-equity-type">
+                  <option value="">None / Not applicable</option>
+                  <option value="rsu">RSU (Restricted Stock Units)</option>
+                  <option value="options">Stock Options</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="b-equity">Equity Value / Year <span class="opt">(estimated, optional)</span></label>
+                <div class="input-prefix">
+                  <input type="text" id="b-equity" class="dollar-input" inputmode="decimal" placeholder="0" autocomplete="off" />
+                </div>
+                <span class="field-hint">Estimated annualized value of equity grant.</span>
+                <span class="field-error" id="b-equity-error" role="alert"></span>
+              </div>
+
+              <div class="field">
+                <label for="b-benefits">Benefits Value / Year <span class="opt">(optional)</span></label>
+                <div class="input-prefix">
+                  <input type="text" id="b-benefits" class="dollar-input" inputmode="decimal" placeholder="0" autocomplete="off" />
+                </div>
+                <span class="field-hint">Health insurance, 401k match, etc.</span>
+                <span class="field-error" id="b-benefits-error" role="alert"></span>
+              </div>
+
+            </div>
+          </div><!-- /offer-b -->
+
+        </div><!-- /offer-grid -->
+
+        <div class="controls-row">
+          <div class="horizon-field">
+            <label for="horizon">Time Horizon</label>
+            <select id="horizon">
+              <option value="1">1 Year</option>
+              <option value="2">2 Years</option>
+              <option value="4" selected>4 Years</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary">Compare Offers →</button>
+          <button type="button" id="reset-btn" class="btn-secondary">Reset</button>
+        </div>
+
+      </form>
+
+      <!-- RESULTS -->
+      <section id="results" class="is-off" aria-live="polite">
+        <h2 class="results-title">Comparison Results</h2>
+
+        <div id="winner-box" class="winner-box">
+          <span id="winner-label"></span>
+        </div>
+
+        <div class="summary-row">
+          <div class="summary-block block-a">
+            <div class="summary-block-header">OFFER A</div>
+            <div class="summary-metrics">
+              <div class="metric">
+                <span class="metric-label">Total Over Horizon</span>
+                <span class="metric-value primary" id="a-total">—</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Avg Per Year</span>
+                <span class="metric-value" id="a-avg">—</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Year 1 Total</span>
+                <span class="metric-value" id="a-year1">—</span>
+              </div>
+            </div>
+          </div>
+          <div class="summary-block block-b">
+            <div class="summary-block-header">OFFER B</div>
+            <div class="summary-metrics">
+              <div class="metric">
+                <span class="metric-label">Total Over Horizon</span>
+                <span class="metric-value primary" id="b-total">—</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Avg Per Year</span>
+                <span class="metric-value" id="b-avg">—</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Year 1 Total</span>
+                <span class="metric-value" id="b-year1">—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <h3>Year-by-Year Comparison</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th class="col-a">Offer A</th>
+                <th class="col-b">Offer B</th>
+                <th>Difference</th>
+              </tr>
+            </thead>
+            <tbody id="compare-tbody"></tbody>
+            <tfoot id="compare-tfoot"></tfoot>
+          </table>
+        </div>
+
+        <p class="disclaimer">Estimates only. Figures are based on inputs you provide and do not account for taxes, vesting schedules, actual bonus payouts, or changes in employment. Verify all details with your offer letter and employer.</p>
+
+        <div id="ad-slot-bottom" class="ad-slot ad-slot-bottom is-off" aria-hidden="true"></div>
+      </section>
+
+
+      <section class="content-section">
+        <h2>What This Calculator Does</h2>
+        <p>This calculator compares two job offers using the inputs you enter for base salary, bonus, equity, benefits, signing bonus, and expected annual raises. It estimates total compensation over a 1-year, 2-year, or 4-year horizon so you can compare offers on a consistent basis.</p>
+
+        <h2>Calculation Methodology</h2>
+        <p>The calculator estimates annual compensation for each offer by combining base salary, expected bonus, annualized equity value, annual benefits value, and any one-time signing bonus. For multi-year comparisons, it applies the expected annual raise to base salary for each future year, recalculates bonus from the updated salary, and sums the results across the selected horizon. This is an informational estimate only and does not model taxes, vesting schedules, cliffs, refresh grants, or actual employer payout rules.</p>
+      </section>
+
+    </div><!-- /.container -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>TotalCompCalc</h4>
+          <p>Free total compensation comparison tool for job seekers. All calculations run locally. No data collected.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <a href="/faq.html">FAQ</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/legal.html">Legal</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Related Tools</h4>
+          <div id="network-links"></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="footer-year"></span> TotalCompCalc.com — For informational use only.</span>
+        <span>Partnerships: <a href="mailto:partnerships@calc-hq.com">partnerships@calc-hq.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="network.js"></script>
+  <script src="app.js"></script>
+  <script src="ads.js"></script>
+  <script>document.getElementById("footer-year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
