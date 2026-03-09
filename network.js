@@ -8,5 +8,8 @@ window.CALC_HQ_NETWORK = [
   { label: "1099 vs W-2 Calculator",      url: "https://1099vsw2calc.com", live: true },
   { label: "Freelance Income Calculator", url: "https://freelanceincomecalc.com", live: true },
   { label: "Quarterly Tax Calculator",    url: "https://quarterlytaxcalc.com", live: true },
-  { label: "Total Compensation Calculator", url: "https://totalcompcalc.com", live: true }
+  { label: "Total Compensation Calculator", url: "https://totalcompcalc.com", live: true },
+  { label: "Overtime Pay Calculator",       url: "https://overtimepaycalc.com", live: true },
+  { label: "After-Tax Salary Calculator",  url: "https://aftertaxsalarycalc.com", live: true },
+  { label: "Take-Home Pay Calculator",     url: "https://takehomepaycalc.com", live: true }
 ];
