@@ -9,19 +9,25 @@
   Cache-Control: public, max-age=3600, must-revalidate
 
 /styles.css
-  Cache-Control: public, max-age=604800, immutable
+  Cache-Control: public, max-age=604800, must-revalidate
 
 /app.js
-  Cache-Control: public, max-age=604800, immutable
+  Cache-Control: public, max-age=604800, must-revalidate
 
 /ads.js
-  Cache-Control: public, max-age=604800, immutable
+  Cache-Control: public, max-age=604800, must-revalidate
 
 /config.js
-  Cache-Control: public, max-age=604800, immutable
+  Cache-Control: public, max-age=604800, must-revalidate
 
 /network.js
-  Cache-Control: public, max-age=604800, immutable
+  Cache-Control: public, max-age=604800, must-revalidate
+
+/assets/*.js
+  Cache-Control: public, max-age=604800, must-revalidate
+
+/assets/*.svg
+  Cache-Control: public, max-age=604800, must-revalidate
 
 /ads.txt
   Cache-Control: public, max-age=86400
